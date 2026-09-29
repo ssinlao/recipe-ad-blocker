@@ -1,10 +1,11 @@
 function removeAds() {
-    let all = document.querySelectorAll('div, span, section, article, li, a, iframe');
+    let all = document.querySelectorAll('div, span, section, article, li, a, iframe, img');
 
     for (let i = 0; i <all.length; i++) {
         if (all[i].textContent.trim() === "Promoted" || 
         all[i].id?.startsWith('div-gpt-ad') || 
         all[i].getAttribute('aria-label') === 'Advertisement' || 
+        all[i].getAttribute('alt') === 'Advertisement' ||
         all[i].className?.includes('ad') || 
         all[i].querySelector('iframe[src*="doubleclick"]')) {
             let card = all[i].closest('.feed-shared-update-v2');
