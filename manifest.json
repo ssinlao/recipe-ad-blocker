@@ -1,0 +1,20 @@
+{
+    "manifest_version":  2,
+    "name": "Recipe AdBlocker",
+    "description": "blocking ads",
+    "version": "0.0.1",
+    "author": "Stella Sinlao",
+    "browser_action": {
+        "default_title": "Recipe AdBlocker"
+    },
+    "permissions": [
+        "tabs",
+        "webNavigations",
+        "https://allrecipes.com/"
+    ],
+    "background": {
+        "scripts": [
+            "extension.js"
+        ]
+    }
+}
